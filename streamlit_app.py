@@ -221,7 +221,7 @@ with col3:
         <h2 style='font-size: 4rem;'>🚚</h2>
         <h3 style='color: #ff9a9e;'>Pengiriman
         Cepat</h3>
-        <p>Packing khusus Pengiriman cepat Aman</p>
+        <p>Packing khusus, Pengiriman cepat, dan Aman</p>
     </div>
     """, unsafe_allow_html=True)
 
