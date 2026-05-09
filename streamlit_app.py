@@ -277,7 +277,7 @@ with st.form(key="order_form", clear_on_submit=True):
                         placeholder="Contoh: Bungkus rapi untuk kado / Topping / dll")
     
     # Total Harga
-   # Total Harga
+ # Total Harga
 total_price = PRODUCTS[selected_product]["price"] * quantity
 
 st.markdown(f"""
@@ -307,11 +307,15 @@ st.markdown(f"""
     </h1>
 </div>
 """, unsafe_allow_html=True)
-    col1, col2 = st.columns([3, 1])
-    with col2:
-        submitted = st.form_submit_button("🚀 KIRIM PESANAN VIA WHATSAPP", 
-                                        use_container_width=True,
-                                        help="Pesanan akan terkirim otomatis ke WA admin")
+
+col1, col2 = st.columns([3, 1])
+
+with col2:
+    submitted = st.form_submit_button(
+        "🚀 KIRIM PESANAN VIA WHATSAPP",
+        use_container_width=True,
+        help="Pesanan akan terkirim otomatis ke WA admin"
+    )
     
     if submitted and name and phone and address:
         # Generate message
