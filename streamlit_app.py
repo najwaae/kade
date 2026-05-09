@@ -175,7 +175,7 @@ load_css()
 # Header
 st.markdown("""
 <div class='main-header'>
-    <h1 style='font-size: 3.5rem; margin: 0;'>🥧 Ka<span style='color: #fff;'>De</span> Pie Susu Lembang</h1>
+    <h1 style='font-size: 3.5rem; margin: 0;'> Ka<span style='color: #fff;'>De</span> Pie Susu Lembang</h1>
     <p style='font-size: 1.5rem; margin: 1rem 0;'>Kelezatan Asli dalam Setiap Gigitan! ✨</p>
     <h3 style='margin: 0;'>Panggang Fresh Setiap Hari</h3>
 </div>
