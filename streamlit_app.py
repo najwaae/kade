@@ -221,7 +221,7 @@ with col3:
         <h2 style='font-size: 4rem;'>🚚</h2>
         <h3 style='color: #ff9a9e;'>Pengiriman
         Cepat</h3>
-        <p>Packing khusus, Pengiriman cepat, dan Aman</p>
+        <p>Packing khusus, Pengiriman cepat, dan Aman.</p>
     </div>
     """, unsafe_allow_html=True)
 
@@ -327,7 +327,7 @@ st.markdown("---")
 
 st.markdown("""
 <div class='footer'>
-    <h2>🥧 Terima Kasih telah mempercayai KaDe Pie Susu Lembang 🥧</h2>
+    <h2> Terima Kasih telah mempercayai KaDe Pie Susu Lembang </h2>
      <h2> Semoga harimu semakin manis di setiap gigitan ❤️</h2>
 </div>
 """, unsafe_allow_html=True)
