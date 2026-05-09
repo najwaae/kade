@@ -151,7 +151,7 @@ PRODUCTS = {
 }
 
 # Nomor WhatsApp - GANTI INI!
-WHATSAPP_NUMBER = "6285781426832"  # ← GANTI DENGAN NOMOR ANDA!
+WHATSAPP_NUMBER = "6285714196687"  # ← GANTI DENGAN NOMOR ANDA!
 
 # Fungsi untuk generate WhatsApp message
 @st.cache_data
