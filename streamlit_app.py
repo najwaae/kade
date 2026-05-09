@@ -340,28 +340,38 @@ st.markdown("""
 
 # Form Pemesanan
 with st.form(key="order_form", clear_on_submit=True):
+
     st.markdown("### 👤 Data Pelanggan")
+
     col1, col2 = st.columns(2)
+
     with col1:
-        name = st.text_input("Nama Lengkap", placeholder="", help="Nama untuk konfirmasi pesanan")
+        name = st.text_input("Nama Lengkap")
+
     with col2:
-        phone = st.text_input("No. WhatsApp", placeholder="081234567890", help="Nomor WA aktif")
-    
+        phone = st.text_input("No. WhatsApp")
+
     st.markdown("### 🛒 Detail Pesanan")
+
     col1, col2 = st.columns(2)
+
     with col1:
         selected_product = st.selectbox(
             "Pilih Produk:",
-            options=list(PRODUCTS.keys()),
-            help="Klik produk di atas untuk quick select"
+            options=list(PRODUCTS.keys())
         )
+
     with col2:
-        quantity = st.number_input("Jumlah", min_value=1, max_value=100, value=1, step=1)
-    
-    address = st.text_area("📍 Alamat Lengkap + Kode Pos", height=80, 
-                          placeholder="Jl. Example No.123, Kecamatan, Bandung, 40123")
-    notes = st.text_area("💬 Catatan (Opsional)", height=60,
-                        placeholder="Contoh: Bungkus rapi untuk kado / Topping / dll")
+        quantity = st.number_input(
+            "Jumlah",
+            min_value=1,
+            max_value=100,
+            value=1,
+            step=1
+        )
+
+    address = st.text_area("Alamat")
+    notes = st.text_area("Catatan")
     
     # Total Harga
    selected_product = st.selectbox(
