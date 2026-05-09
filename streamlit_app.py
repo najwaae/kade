@@ -199,7 +199,7 @@ with col1:
     <div class='metric-card'>
         <h2 style='font-size: 4rem;'>🥛</h2>
         <h3 style='color: #ff6b6b;'>Bahan Premium</h3>
-        <p>Susu segar, telur kampung organik, tepung terigu pilihan</p>
+        <p>Dibuat dengan kualitas premium untuk rasa yang lebih istimewa.</p>
     </div>
     """, unsafe_allow_html=True)
 
@@ -217,7 +217,7 @@ with col3:
     <div class='metric-card'>
         <h2 style='font-size: 4rem;'>🚚</h2>
         <h3 style='color: #ff9a9e;'>Pengiriman Cepat</h3>
-        <p>Packing khusus • Dingin sampai • Aman</p>
+        <p>Packing khusus • Pengiriman cepat • Aman</p>
     </div>
     """, unsafe_allow_html=True)
 
