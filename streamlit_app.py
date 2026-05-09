@@ -6,7 +6,7 @@ import time
 
 # Konfigurasi halaman
 st.set_page_config(
-    page_title="KaDe Pie Susu Bandung",
+    page_title="KaDe Pie Susu Lembang",
     page_icon="🥧",
     layout="wide",
     initial_sidebar_state="expanded"
@@ -121,7 +121,7 @@ PRODUCTS = {
     "Pie Susu Original": {
         "emoji": "🥧",
         "price": 20000,
-        "desc": "Pie susu original rasa susu khas Bandung"
+        "desc": "Pie susu original rasa susu khas"
     },
     "Pie Susu Coklat": {
         "emoji": "🍫", 
@@ -176,7 +176,7 @@ load_css()
 # Header
 st.markdown("""
 <div class='main-header'>
-    <h1 style='font-size: 3.5rem; margin: 0;'>🥧 Ka<span style='color: #fff;'>De</span> Pie Susu Bandung</h1>
+    <h1 style='font-size: 3.5rem; margin: 0;'>🥧 Ka<span style='color: #fff;'>De</span> Pie Susu Lembang</h1>
     <p style='font-size: 1.5rem; margin: 1rem 0;'>Kelezatan Asli Bandung dalam Setiap Gigitan! ✨</p>
     <h3 style='margin: 0;'>Panggang Fresh Setiap Hari</h3>
 </div>
@@ -253,7 +253,7 @@ with st.form(key="order_form", clear_on_submit=True):
     st.markdown("### 👤 Data Pelanggan")
     col1, col2 = st.columns(2)
     with col1:
-        name = st.text_input("Nama Lengkap", placeholder="John Doe", help="Nama untuk konfirmasi pesanan")
+        name = st.text_input("Nama Lengkap", placeholder="", help="Nama untuk konfirmasi pesanan")
     with col2:
         phone = st.text_input("No. WhatsApp", placeholder="081234567890", help="Nomor WA aktif")
     
@@ -271,7 +271,7 @@ with st.form(key="order_form", clear_on_submit=True):
     address = st.text_area("📍 Alamat Lengkap + Kode Pos", height=80, 
                           placeholder="Jl. Example No.123, Kecamatan, Bandung, 40123")
     notes = st.text_area("💬 Catatan (Opsional)", height=60,
-                        placeholder="Contoh: Bungkus rapi untuk kado / Tanpa topping / dll")
+                        placeholder="Contoh: Bungkus rapi untuk kado / Topping / dll")
     
     # Total Harga
     total_price = PRODUCTS[selected_product]["price"] * quantity
@@ -324,7 +324,7 @@ st.markdown("---")
 
 st.markdown("""
 <div class='footer'>
-    <h2>🥧 Terima Kasih telah mempercayai KaDe Pie Susu Bandung 🥧</h2>
+    <h2>🥧 Terima Kasih telah mempercayai KaDe Pie Susu Lembang 🥧</h2>
      <h2> Semoga harimu semakin manis di setiap gigitan ❤️</h2>
 </div>
 """, unsafe_allow_html=True)
