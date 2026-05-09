@@ -119,7 +119,7 @@ def load_css():
 # Data Produk 
 PRODUCTS = {
     "Pie Susu Original": {
-        "image": "WhatsApp Image 2026-05-09 at 16.58.28.jpeg",
+        "image": "image/WhatsApp Image 2026-05-09 at 16.58.28.jpeg",
         "price": 20000,
         "desc": "Pie susu original rasa susu khas"
     },
