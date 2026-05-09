@@ -7,7 +7,6 @@ import time
 # Konfigurasi halaman
 st.set_page_config(
     page_title="KaDe Pie Susu Lembang",
-    page_icon="",
     layout="wide",
     initial_sidebar_state="expanded"
 )
