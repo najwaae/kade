@@ -178,7 +178,7 @@ st.markdown("""
 <div class='main-header'>
     <h1 style='font-size: 3.5rem; margin: 0;'>🥧 Ka<span style='color: #fff;'>De</span> Pie Susu Bandung</h1>
     <p style='font-size: 1.5rem; margin: 1rem 0;'>Kelezatan Asli Bandung dalam Setiap Gigitan! ✨</p>
-    <h3 style='margin: 0;'>Panggang Fresh Setiap Hari 🚚💨</h3>
+    <h3 style='margin: 0;'>Panggang Fresh Setiap Hari</h3>
 </div>
 """, unsafe_allow_html=True)
 
@@ -217,7 +217,7 @@ with col3:
     <div class='metric-card'>
         <h2 style='font-size: 4rem;'>🚚</h2>
         <h3 style='color: #ff9a9e;'>Pengiriman Cepat</h3>
-        <p>Packing khusus • Pengiriman cepat • Aman</p>
+        <p>Packing khusus Pengiriman cepat Aman</p>
     </div>
     """, unsafe_allow_html=True)
 
