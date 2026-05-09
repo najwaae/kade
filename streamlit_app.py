@@ -7,7 +7,7 @@ import time
 # Konfigurasi halaman
 st.set_page_config(
     page_title="KaDe Pie Susu Lembang",
-    page_icon="🥧",
+    page_icon="",
     layout="wide",
     initial_sidebar_state="expanded"
 )
@@ -199,7 +199,7 @@ with col1:
     st.markdown("""
     <div class='metric-card'>
         <h2 style='font-size: 4rem;'>🥛</h2>
-        <h3 style='color: #ff6b6b;'>Bahan Premium</h3>
+        <h3 style='color: #ff6b6b;'>BahanPremium</h3>
         <p>Dibuat dengan kualitas premium untuk rasa yang lebih istimewa.</p>
     </div>
     """, unsafe_allow_html=True)
@@ -208,7 +208,7 @@ with col2:
     st.markdown("""
     <div class='metric-card'>
         <h2 style='font-size: 4rem;'>🔥</h2>
-        <h3 style='color: #feca57;'>Panggang Fresh</h3>
+        <h3 style='color: #feca57;'>PanggangFresh</h3>
         <p>Langsung dari oven panas ke tangan Anda 😋</p>
     </div>
     """, unsafe_allow_html=True)
@@ -217,7 +217,7 @@ with col3:
     st.markdown("""
     <div class='metric-card'>
         <h2 style='font-size: 4rem;'>🚚</h2>
-        <h3 style='color: #ff9a9e;'>Pengiriman Cepat</h3>
+        <h3 style='color: #ff9a9e;'>PengirimanCepat</h3>
         <p>Packing khusus Pengiriman cepat Aman</p>
     </div>
     """, unsafe_allow_html=True)
