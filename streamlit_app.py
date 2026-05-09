@@ -188,6 +188,93 @@ st.sidebar.markdown(f"**WhatsApp:** [wa.me/{WHATSAPP_NUMBER}](https://wa.me/{WHA
 st.sidebar.markdown(f"**Shopee:** https://s.shopee.co.id/3qJnfNJNMF?share_channel_code=1")
 st.sidebar.markdown("**📍 Wilayah:** Jawa Barat & Sekitarnya")
 st.sidebar.markdown("**⏰ Jam Buka:** 07.00 - 18.00")
+st.sidebar.markdown("""
+### 🛒 Info Mitra & Reseller
+
+**BOGOR**
+1. Toko Kade 
+Jl. Raya Taman Pagelaran No.1, Padasuka, Kec. Ciomas, Kabupaten Bogor 
+2. Rumah Talas Jl. Pajajaran No.102, RT.03/RW.12, Bantarjati, Kec. Bogor Utara, Kota Bogor 
+3. Damri 
+4. Toko Gloria 
+Jalan Pandu Raya No.197 Ruko No.4, Bogor Timur, RT.04/RW.15, Tegal Gundil, Kec. Bogor Utara, Kota Bogor 
+5. Toko Han-Han 
+Pertigaan Pancasan dekat RS Umi 
+6. Toko Kue Al 
+Jl. Raya Ciomas Kreteg No.41a, Pagelaran, Kec. Ciomas, Kabupaten Bogor 
+7. Warung Talas Caringin 
+8. Warung Talas Cisarua 
+Cisarua, Kabupaten Bogor, Jawa Barat 
+9. Kabayan Cake Cipayung 
+(seberang Cimory Riverside), Kabupaten Bogor, Jawa Barat 
+
+**BANDUNG**
+1. Toko KaDe Ciwastra 
+Jl. Ciwastra Kalapa Dua No.189 Ruko No.5 
+2. Toko Kanami 
+Jl. Raya Bodogol (depan masjid) 
+3. Toko Kade Bojongsoang 
+Jl. Raya Bojongsoang No.253, Lengkong 
+4. Toko Pandan Wangi 
+Jl. Gegerkalong Girang No.57, Gegerkalong 
+5. Toko Laris Manis 
+Jl. Raya Cijerah No.51A, Cijerah, Kec. Bandung 
+6. Toko Sangkali 
+7. Al' Maksoem 
+8. Toko Bagus Cimahi 1 
+Jl. Jend. H. Amir Machmud No.476, Cibabat 
+9. Toko Bagus Cimahi 2 
+10. Toko Bagus Cimindi 
+11. Toko Bagus M Toha 
+12. Toko Bagus GatSu 
+13. Toko Bagus Cikutra 
+14. Toko Bagus Cinunuk 
+15. Toko Kedai Zian 
+Cihampelas, Kabupaten Bandung Barat 
+16. Toko PGB 
+Jl. Gudang Utara No.29, Merdeka, Bandung 
+17. Toko Citra Rasa 
+Jl. Tol Padaleunyi, Rest Area Tol Desa No.149, Kec. Bojongsoang, Bandung 
+18. Toko G & Z 
+Jl. Cipamokolan No.48, Cipamokolan, Kec. Rancasari, Kota Bandung, Jawa Barat 40292 
+19. Toko Manis Group 
+20. Toko Cinta 
+Terusan Buah Batu No.191D 
+21. Toko Barokah 
+Jl. Raya Cinunuk No.181 
+22. Toko Michele 
+Jl. Margacinta No.52A, Cijaura, Kec. Buahbatu, Kota Bandung 
+23. Toko Laris 
+24. Pasmart LP Banceuy 
+Sukajadi Kawung Sari, Wargamekar, Kec. Baleendah, Bandung 
+25. Aisyah Cake 
+Jatinangor, Kabupaten Sumedang, Jawa Barat 
+26. Asia Afrika Snack 
+Lembang Bandung No.71, Gudangkahuripan, Kec. Lembang 
+27. Oleh2 Nusantara Snack Cihampelas 
+Jl. Cihampelas No.175, Cipaganti, Kecamatan Coblong, Kota Bandung 
+28. Sarimanis 3 Ciwidey 
+Jl. Raya Patenggang – Jl. Raya Ciwidey Rancabali No.Km.4, Ciwidey 
+29. Rahayu Snack 
+30. Sariraos 5 Lembang 
+Jl. Raya Lembang No.240, Lembang, Kec. Lembang, Kabupaten Bandung Barat 
+31. Odjolali Snack 
+Jl. Cihampelas No.131, Cipaganti, Kecamatan Coblong, Kota Bandung 
+32. ACR Pusat (Cimahi) 
+Jl. Kerkof No.1, Leuwigajah, Cimahi 
+33. ACR Mekarwangi 
+Jl. Indrayasa No.154B, Cibaduyut 
+34. ACR Pajajaran 
+Jl. Pajajaran No.85, Arjuna, Cicendo 
+35. ACR Cihanjuang 
+Jl. Cihanjuang No.104, Cibabat 
+36. Nanakam Freshmart 
+Jl. L. R.E. Martadinata No.22A, Citarum 
+37. Rumah Mode 
+Jl. Dr. Setiabudi No.41, Pasteur 
+38. RM Cibiuk 
+Jl. Soekarno Hatta No.508, Batununggal
+""")
 
 
 # Section 1: Keunggulan
