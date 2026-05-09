@@ -363,52 +363,7 @@ with st.form(key="order_form", clear_on_submit=True):
     notes = st.text_area("💬 Catatan (Opsional)", height=60,
                         placeholder="Contoh: Bungkus rapi untuk kado / Topping / dll")
     
-    # Total Harga
-    total_price = PRODUCTS[selected_product]["price"] * quantity
-    st.markdown(f"""
-    <div style='background: rgba(255,255,255,0.2); padding: 1.5rem; border-radius: 15px; margin: 2rem 0;'>
-        <h3 style='margin: 0;'>💰 TOTAL PEMBAYARAN</h3>
-        <h2 style='color: #fff; margin: 0.5rem 0;'>Rp {total_price:,}</h2>
-    </div>
-    """, unsafe_allow_html=True)
-    
-    # Total Harga
-   selected_product = st.selectbox(
-    "Pilih Produk:",
-    options=list(PRODUCTS.keys())
-)
-
-quantity = st.number_input("Jumlah", min_value=1, max_value=100, value=1, step=1)
-
-total_price = PRODUCTS[selected_product]["price"] * quantity
-   st.markdown(f"""
-<div style="
-    background: white;
-    padding: 1.5rem;
-    border-radius: 15px;
-    margin: 2rem 0;
-    text-align: center;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-">
-    <h3 style="
-        margin: 0;
-        color: #333;
-        font-size: 1.5rem;
-    ">
-        💰 TOTAL PEMBAYARAN
-    </h3>
-
-    <h1 style="
-        color: #ff6b6b;
-        margin-top: 1rem;
-        font-size: 3rem;
-        font-weight: 700;
-    ">
-        Rp {total_price:,}
-    </h1>
-</div>
-""", unsafe_allow_html=True)
-    
+   
     col1, col2 = st.columns([3, 1])
     with col2:
         submitted = st.form_submit_button("🚀 KIRIM PESANAN VIA WHATSAPP", 
