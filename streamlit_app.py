@@ -151,7 +151,7 @@ PRODUCTS = {
 }
 
 # Nomor WhatsApp 
-WHATSAPP_NUMBER = "6285714196687"  # 
+WHATSAPP_NUMBER = "6285781426832"  # 
 
 # Fungsi untuk generate WhatsApp message
 @st.cache_data
