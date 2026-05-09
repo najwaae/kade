@@ -185,8 +185,9 @@ st.markdown("""
 # Sidebar
 st.sidebar.markdown("## 📞 Kontak Cepat")
 st.sidebar.markdown(f"**WhatsApp:** [wa.me/{WHATSAPP_NUMBER}](https://wa.me/{WHATSAPP_NUMBER})")
+st.sidebar.markdown(f"**Shopee:** https://s.shopee.co.id/3qJnfNJNMF?share_channel_code=1")
 st.sidebar.markdown("**📍 Wilayah:** Jawa Barat & Sekitarnya")
-st.sidebar.markdown("**⏰ Jam Buka:** 08.00 - 20.00")
+st.sidebar.markdown("**⏰ Jam Buka:** 07.00 - 18.00")
 
 
 # Section 1: Keunggulan
