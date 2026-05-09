@@ -318,28 +318,33 @@ st.markdown("</div>", unsafe_allow_html=True)
 
 # Footer
 # Footer
+# Footer
 st.markdown("---")
 
-st.markdown(f"""
+footer_html = f"""
 <div class='footer'>
-    <h3 style='margin-bottom: 1rem;'>🥧 KaDe Pie Susu Bandung</h3>
+    <h3 style='margin-bottom: 1rem;'>
+        🥧 KaDe Pie Susu Bandung
+    </h3>
 
     <p>
         © 2024 | Dibuat dengan ❤️ dari Bandung |
-        <a href='https://wa.me/{WHATSAPP_NUMBER}'
-        style='color: #25D366; text-decoration: none;'>
-        📲 Order WA
+        <a href="https://wa.me/{WHATSAPP_NUMBER}"
+           target="_blank"
+           style="color:#25D366; text-decoration:none; font-weight:600;">
+           📲 Order WA
         </a>
     </p>
 
     <p>
         <small>
-        Panggang Fresh • Pengiriman Bandung & Sekitarnya • Resep Keluarga
+            Panggang Fresh • Pengiriman Bandung & Sekitarnya • Resep Keluarga
         </small>
     </p>
 </div>
-""", unsafe_allow_html=True)
+"""
 
+st.markdown(footer_html, unsafe_allow_html=True)
 # Hide Streamlit menu & footer
 hide_menu_style = """
     <style>
