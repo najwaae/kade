@@ -324,15 +324,8 @@ st.markdown("---")
 
 st.markdown("""
 <div class='footer'>
-    <h2>🥧 Terima Kasih Sudah Berkunjung 🥧</h2>
-
-    <p style='margin-top:1rem; font-size:1.1rem;'>
-        Terima kasih telah mempercayai KaDe Pie Susu Bandung ✨
-    </p>
-
-    <p>
-        Semoga harimu semakin manis di setiap gigitan ❤️
-    </p>
+    <h2>🥧 Terima Kasih telah mempercayai KaDe Pie Susu Bandung 🥧</h2>
+     <h2> Semoga harimu semakin manis di setiap gigitan ❤️</h2>
 </div>
 """, unsafe_allow_html=True)
 # Hide Streamlit menu & footer
