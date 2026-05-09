@@ -118,30 +118,40 @@ def load_css():
 
 # Data Produk - SUDAH DIPERBAIKI!
 PRODUCTS = {
-    "Classic Pie Susu": {
+    "Pie Susu Original": {
         "emoji": "🥧",
-        "price": 25000,
-        "desc": "Pie susu original rasa susu kental manis khas Bandung"
+        "price": 20000,
+        "desc": "Pie susu original rasa susu khas Bandung"
     },
-    "Lemon Pie Susu": {
-        "emoji": "🍋", 
-        "price": 28000,
-        "desc": "Sensasi segar lemon dengan tekstur lembut creamy"
+    "Pie Susu Coklat": {
+        "emoji": "🍫", 
+        "price": 20000,
+        "desc": "Rasa coklat dengan tekstur lembut creamy"
     },
-    "Strawberry Pie Susu": {
-        "emoji": "🍓",
-        "price": 30000,
-        "desc": "Stroberi segar bertemu susu krim lembut"
+    "Pie Susu Keju": {
+        "emoji": "🧀",
+        "price": 20000,
+        "desc": "Keju premium bertemu susu krim lembut"
+     },
+    "Pie Susu Matcha": {
+        "emoji": "🍃",
+        "price": 20000,
+        "desc": "Matcha yang khas bertemu susu krim lembut"
+     },
+    "Pie Talas Susu": {
+        "emoji": "🍠",
+        "price": 20000,
+        "desc": "Talas segar bertemu susu krim lembut"
     },
-    "Premium Box (6 pcs)": {
-        "emoji": "👑",
-        "price": 150000,
-        "desc": "Mix 6 rasa spesial, cocok untuk hadiah"
+    "Pie Susu Mix": {
+        "emoji": "",
+        "price": 20000,
+        "desc": "Mix 7 rasa spesial, cocok untuk hadiah"
     }
 }
 
 # Nomor WhatsApp - GANTI INI!
-WHATSAPP_NUMBER = "6281234567890"  # ← GANTI DENGAN NOMOR ANDA!
+WHATSAPP_NUMBER = "6285781426832"  # ← GANTI DENGAN NOMOR ANDA!
 
 # Fungsi untuk generate WhatsApp message
 @st.cache_data
@@ -175,15 +185,9 @@ st.markdown("""
 # Sidebar
 st.sidebar.markdown("## 📞 Kontak Cepat")
 st.sidebar.markdown(f"**WhatsApp:** [wa.me/{WHATSAPP_NUMBER}](https://wa.me/{WHATSAPP_NUMBER})")
-st.sidebar.markdown("**📍 Wilayah:** Bandung & Sekitarnya")
+st.sidebar.markdown("**📍 Wilayah:** Jawa Barat & Sekitarnya")
 st.sidebar.markdown("**⏰ Jam Buka:** 08.00 - 20.00")
 
-st.sidebar.markdown("---")
-st.sidebar.markdown("### 📊 Hari Ini")
-col1, col2, col3 = st.sidebar.columns(3)
-col1.metric("Pesanan", "15")
-col2.metric("Pendapatan", "Rp 2.850.000", "Rp 450.000")
-col3.metric("Pelanggan", "52", "7")
 
 # Section 1: Keunggulan
 st.markdown("---")
