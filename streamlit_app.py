@@ -119,7 +119,7 @@ def load_css():
 # Data Produk 
 PRODUCTS = {
     "Pie Susu Original": {
-        "image": "image/pieoriginal.jpg",
+        "emoji": "🥧",
         "price": 20000,
         "desc": "Pie susu original rasa susu khas"
     },
@@ -321,7 +321,7 @@ for i, (product_name, data) in enumerate(PRODUCTS.items()):
     with cols[i % 2]:
         st.markdown(f"""
         <div class='product-card'>
-            <img src="{data['image']}" style="width:120px; height:120px; object-fit:cover; border-radius:15px; margin-bottom:1rem;" />
+            <div style='font-size: 4rem; margin-bottom: 1rem;'>{data['emoji']}</div>
             <h3 style='color: #333; margin-bottom: 1rem;'>{product_name}</h3>
             <div class='price-tag'>Rp {data['price']:,}</div>
             <p style='color: #666; margin: 1.5rem 0;'>{data['desc']}</p>
