@@ -41,11 +41,13 @@ def load_css():
         transition: all 0.3s ease;
         height: 100%;
         cursor: pointer;
+        border: 3px solid transparent;
     }
     
     .product-card:hover {
         transform: translateY(-10px);
         box-shadow: 0 20px 40px rgba(0,0,0,0.2) !important;
+        border-color: #ff6b6b;
     }
     
     .price-tag {
@@ -72,6 +74,9 @@ def load_css():
         font-size: 1.2rem !important;
         padding: 1rem 2rem !important;
         box-shadow: 0 8px 25px rgba(37,211,102,0.4) !important;
+        color: white !important;
+        border: none !important;
+        width: 100%;
     }
     
     .metric-card {
@@ -80,6 +85,11 @@ def load_css():
         border-radius: 20px;
         text-align: center;
         color: #333;
+    }
+    
+    .stButton > button {
+        border-radius: 50px !important;
+        font-weight: 600 !important;
     }
     
     .stButton > button:hover {
@@ -94,19 +104,228 @@ def load_css():
         border-radius: 20px;
         margin-top: 3rem;
     }
+    
+    .success-box {
+        background: linear-gradient(135deg, #56ab2f, #a8e6cf);
+        padding: 2rem;
+        border-radius: 20px;
+        text-align: center;
+        color: white;
+        margin: 2rem 0;
+    }
     </style>
     """, unsafe_allow_html=True)
 
-# Data Produk
+# Data Produk - SUDAH DIPERBAIKI!
 PRODUCTS = {
-    "🥧 Classic Pie Susu": {
+    "Classic Pie Susu": {
+        "emoji": "🥧",
         "price": 25000,
         "desc": "Pie susu original rasa susu kental manis khas Bandung"
     },
-    "🍋 Lemon Pie Susu": {
+    "Lemon Pie Susu": {
+        "emoji": "🍋", 
         "price": 28000,
         "desc": "Sensasi segar lemon dengan tekstur lembut creamy"
     },
-    "🍓 Strawberry Pie Susu": {
+    "Strawberry Pie Susu": {
+        "emoji": "🍓",
         "price": 30000,
-        "desc": "Stroberi segar bertemu sus
+        "desc": "Stroberi segar bertemu susu krim lembut"
+    },
+    "Premium Box (6 pcs)": {
+        "emoji": "👑",
+        "price": 150000,
+        "desc": "Mix 6 rasa spesial, cocok untuk hadiah"
+    }
+}
+
+# Nomor WhatsApp - GANTI INI!
+WHATSAPP_NUMBER = "6281234567890"  # ← GANTI DENGAN NOMOR ANDA!
+
+# Fungsi untuk generate WhatsApp message
+@st.cache_data
+def create_whatsapp_message(name, product, qty, address, notes=""):
+    total = PRODUCTS[product]["price"] * int(qty)
+    message = f"""🎉 HALO KADE PIE SUSU BANDUNG! 🎉
+
+👤 Nama: {name}
+📦 Pesanan: {product} x{qty}
+💰 Total: Rp {total:,}
+📍 Alamat: {address}
+📝 Catatan: {notes}
+
+⏰ Waktu: {datetime.now().strftime('%d/%m/%Y %H:%M')}
+
+Terima kasih! 🥧✨"""
+    return message
+
+# Load CSS
+load_css()
+
+# Header
+st.markdown("""
+<div class='main-header'>
+    <h1 style='font-size: 3.5rem; margin: 0;'>🥧 Ka<span style='color: #fff;'>De</span> Pie Susu Bandung</h1>
+    <p style='font-size: 1.5rem; margin: 1rem 0;'>Kelezatan Asli Bandung dalam Setiap Gigitan! ✨</p>
+    <h3 style='margin: 0;'>Panggang Fresh Setiap Hari 🚚💨</h3>
+</div>
+""", unsafe_allow_html=True)
+
+# Sidebar
+st.sidebar.markdown("## 📞 Kontak Cepat")
+st.sidebar.markdown(f"**WhatsApp:** [wa.me/{WHATSAPP_NUMBER}](https://wa.me/{WHATSAPP_NUMBER})")
+st.sidebar.markdown("**📍 Wilayah:** Bandung & Sekitarnya")
+st.sidebar.markdown("**⏰ Jam Buka:** 08.00 - 20.00")
+
+st.sidebar.markdown("---")
+st.sidebar.markdown("### 📊 Hari Ini")
+col1, col2, col3 = st.sidebar.columns(3)
+col1.metric("Pesanan", "15")
+col2.metric("Pendapatan", "Rp 2.850.000", "Rp 450.000")
+col3.metric("Pelanggan", "52", "7")
+
+# Section 1: Keunggulan
+st.markdown("---")
+st.markdown("<h2 style='text-align: center; color: #ff6b6b; font-size: 2.5rem; margin-bottom: 3rem;'>✨ Mengapa Pilih KaDe?</h2>", unsafe_allow_html=True)
+
+col1, col2, col3 = st.columns(3)
+with col1:
+    st.markdown("""
+    <div class='metric-card'>
+        <h2 style='font-size: 4rem;'>🥛</h2>
+        <h3 style='color: #ff6b6b;'>Bahan Premium</h3>
+        <p>Susu segar, telur kampung organik, tepung terigu pilihan</p>
+    </div>
+    """, unsafe_allow_html=True)
+
+with col2:
+    st.markdown("""
+    <div class='metric-card'>
+        <h2 style='font-size: 4rem;'>🔥</h2>
+        <h3 style='color: #feca57;'>Panggang Fresh</h3>
+        <p>Langsung dari oven panas ke tangan Anda 😋</p>
+    </div>
+    """, unsafe_allow_html=True)
+
+with col3:
+    st.markdown("""
+    <div class='metric-card'>
+        <h2 style='font-size: 4rem;'>🚚</h2>
+        <h3 style='color: #ff9a9e;'>Pengiriman Cepat</h3>
+        <p>Packing khusus • Dingin sampai • Aman</p>
+    </div>
+    """, unsafe_allow_html=True)
+
+# Section 2: Produk
+st.markdown("---")
+st.markdown("<h2 style='text-align: center; color: #ff6b6b; font-size: 2.5rem;'>🍰 Produk Unggulan Kami</h2>", unsafe_allow_html=True)
+
+cols = st.columns(2)
+for i, (product_name, data) in enumerate(PRODUCTS.items()):
+    with cols[i % 2]:
+        st.markdown(f"""
+        <div class='product-card'>
+            <div style='font-size: 4rem; margin-bottom: 1rem;'>{data['emoji']}</div>
+            <h3 style='color: #333; margin-bottom: 1rem;'>{product_name}</h3>
+            <div class='price-tag'>Rp {data['price']:,}</div>
+            <p style='color: #666; margin: 1.5rem 0;'>{data['desc']}</p>
+            <a href='#' onclick='document.getElementById("order-form").scrollIntoView();' style='text-decoration: none;'>
+                <button style='background: linear-gradient(45deg, #ff6b6b, #feca57); color: white; border: none; padding: 1rem 2rem; border-radius: 50px; font-weight: 600; width: 100%; cursor: pointer;'>🛒 Pesan Sekarang</button>
+            </a>
+        </div>
+        """, unsafe_allow_html=True)
+
+# Section 3: Form Pemesanan
+st.markdown("---")
+st.markdown("""
+<div class='order-section'>
+    <h2 style='margin-bottom: 2rem;'>📋 Pesan Sekarang - Mudah & Cepat!</h2>
+""", unsafe_allow_html=True)
+
+# Form Pemesanan
+with st.form(key="order_form", clear_on_submit=True):
+    st.markdown("### 👤 Data Pelanggan")
+    col1, col2 = st.columns(2)
+    with col1:
+        name = st.text_input("Nama Lengkap", placeholder="John Doe", help="Nama untuk konfirmasi pesanan")
+    with col2:
+        phone = st.text_input("No. WhatsApp", placeholder="081234567890", help="Nomor WA aktif")
+    
+    st.markdown("### 🛒 Detail Pesanan")
+    col1, col2 = st.columns(2)
+    with col1:
+        selected_product = st.selectbox(
+            "Pilih Produk:",
+            options=list(PRODUCTS.keys()),
+            help="Klik produk di atas untuk quick select"
+        )
+    with col2:
+        quantity = st.number_input("Jumlah", min_value=1, max_value=100, value=1, step=1)
+    
+    address = st.text_area("📍 Alamat Lengkap + Kode Pos", height=80, 
+                          placeholder="Jl. Example No.123, Kecamatan, Bandung, 40123")
+    notes = st.text_area("💬 Catatan (Opsional)", height=60,
+                        placeholder="Contoh: Bungkus rapi untuk kado / Tanpa topping / dll")
+    
+    # Total Harga
+    total_price = PRODUCTS[selected_product]["price"] * quantity
+    st.markdown(f"""
+    <div style='background: rgba(255,255,255,0.2); padding: 1.5rem; border-radius: 15px; margin: 2rem 0;'>
+        <h3 style='margin: 0;'>💰 TOTAL PEMBAYARAN</h3>
+        <h2 style='color: #fff; margin: 0.5rem 0;'>Rp {total_price:,}</h2>
+    </div>
+    """, unsafe_allow_html=True)
+    
+    col1, col2 = st.columns([3, 1])
+    with col2:
+        submitted = st.form_submit_button("🚀 KIRIM PESANAN VIA WHATSAPP", 
+                                        use_container_width=True,
+                                        help="Pesanan akan terkirim otomatis ke WA admin")
+    
+    if submitted and name and phone and address:
+        # Generate message
+        message = create_whatsapp_message(name, selected_product, quantity, address, notes)
+        whatsapp_url = f"https://wa.me/{WHATSAPP_NUMBER}?text={message.replace('#', '%23').replace(' ', '%20').replace('\n', '%0A')}"
+        
+        # Success animation
+        st.balloons()
+        st.markdown("""
+        <div class='success-box'>
+            <h2>✅ Pesanan Berhasil!</h2>
+            <p>Pesan sudah terkirim ke WhatsApp admin. Silakan buka WA untuk konfirmasi pembayaran.</p>
+        </div>
+        """, unsafe_allow_html=True)
+        
+        # Big WhatsApp Button
+        st.markdown(f"""
+        <div style='margin: 2rem 0;'>
+            <a href='{whatsapp_url}' target='_blank' class='whatsapp-btn'>
+                📱 BUKA WHATSAPP SEKARANG
+            </a>
+        </div>
+        """, unsafe_allow_html=True)
+        
+        st.info(f"**Link WhatsApp:** [Klik Disini]({whatsapp_url})")
+        st.balloons()
+
+st.markdown("</div>", unsafe_allow_html=True)
+
+# Footer
+st.markdown("---")
+st.markdown("""
+<div class='footer'>
+    <h3 style='margin-bottom: 1rem;'>🥧 KaDe Pie Susu Bandung</h3>
+    <p>© 2024 | Dibuat dengan ❤️ dari Bandung | <a href='https://wa.me/{WHATSAPP_NUMBER}' style='color: #25D366; text-decoration: none;'>📲 Order WA</a></p>
+    <p><small>Panggang Fresh • Pengiriman Bandung & Sekitarnya • Resep Keluarga</small></p>
+</div>
+""".format(WHATSAPP_NUMBER), unsafe_allow_html=True)
+
+# Hide Streamlit menu & footer
+hide_menu_style = """
+    <style>
+    #MainMenu {visibility: hidden;}
+    footer {visibility: hidden;}
+    </style>
+    """
+st.markdown(hide_menu_style, unsafe_allow_html=True)
