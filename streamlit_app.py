@@ -317,14 +317,28 @@ with st.form(key="order_form", clear_on_submit=True):
 st.markdown("</div>", unsafe_allow_html=True)
 
 # Footer
+# Footer
 st.markdown("---")
-st.markdown("""
+
+st.markdown(f"""
 <div class='footer'>
     <h3 style='margin-bottom: 1rem;'>🥧 KaDe Pie Susu Bandung</h3>
-    <p>© 2024 | Dibuat dengan ❤️ dari Bandung | <a href='https://wa.me/{WHATSAPP_NUMBER}' style='color: #25D366; text-decoration: none;'>📲 Order WA</a></p>
-    <p><small>Panggang Fresh • Pengiriman Bandung & Sekitarnya • Resep Keluarga</small></p>
+
+    <p>
+        © 2024 | Dibuat dengan ❤️ dari Bandung |
+        <a href='https://wa.me/{WHATSAPP_NUMBER}'
+        style='color: #25D366; text-decoration: none;'>
+        📲 Order WA
+        </a>
+    </p>
+
+    <p>
+        <small>
+        Panggang Fresh • Pengiriman Bandung & Sekitarnya • Resep Keluarga
+        </small>
+    </p>
 </div>
-""".format(WHATSAPP_NUMBER), unsafe_allow_html=True)
+""", unsafe_allow_html=True)
 
 # Hide Streamlit menu & footer
 hide_menu_style = """
