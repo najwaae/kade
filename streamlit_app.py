@@ -364,8 +364,15 @@ with st.form(key="order_form", clear_on_submit=True):
                         placeholder="Contoh: Bungkus rapi untuk kado / Topping / dll")
     
     # Total Harga
-    total_price = PRODUCTS[selected_product]["price"] * quantity
-    st.markdown(f"""
+   selected_product = st.selectbox(
+    "Pilih Produk:",
+    options=list(PRODUCTS.keys())
+)
+
+quantity = st.number_input("Jumlah", min_value=1, max_value=100, value=1, step=1)
+
+total_price = PRODUCTS[selected_product]["price"] * quantity
+   st.markdown(f"""
 <div style="
     background: white;
     padding: 1.5rem;
