@@ -340,38 +340,37 @@ st.markdown("""
 
 # Form Pemesanan
 with st.form(key="order_form", clear_on_submit=True):
-
     st.markdown("### 👤 Data Pelanggan")
-
     col1, col2 = st.columns(2)
-
     with col1:
-        name = st.text_input("Nama Lengkap")
-
+        name = st.text_input("Nama Lengkap", placeholder="", help="Nama untuk konfirmasi pesanan")
     with col2:
-        phone = st.text_input("No. WhatsApp")
-
+        phone = st.text_input("No. WhatsApp", placeholder="081234567890", help="Nomor WA aktif")
+    
     st.markdown("### 🛒 Detail Pesanan")
-
     col1, col2 = st.columns(2)
-
     with col1:
         selected_product = st.selectbox(
             "Pilih Produk:",
-            options=list(PRODUCTS.keys())
+            options=list(PRODUCTS.keys()),
+            help="Klik produk di atas untuk quick select"
         )
-
     with col2:
-        quantity = st.number_input(
-            "Jumlah",
-            min_value=1,
-            max_value=100,
-            value=1,
-            step=1
-        )
-
-    address = st.text_area("Alamat")
-    notes = st.text_area("Catatan")
+        quantity = st.number_input("Jumlah", min_value=1, max_value=100, value=1, step=1)
+    
+    address = st.text_area("📍 Alamat Lengkap + Kode Pos", height=80, 
+                          placeholder="Jl. Example No.123, Kecamatan, Bandung, 40123")
+    notes = st.text_area("💬 Catatan (Opsional)", height=60,
+                        placeholder="Contoh: Bungkus rapi untuk kado / Topping / dll")
+    
+    # Total Harga
+    total_price = PRODUCTS[selected_product]["price"] * quantity
+    st.markdown(f"""
+    <div style='background: rgba(255,255,255,0.2); padding: 1.5rem; border-radius: 15px; margin: 2rem 0;'>
+        <h3 style='margin: 0;'>💰 TOTAL PEMBAYARAN</h3>
+        <h2 style='color: #fff; margin: 0.5rem 0;'>Rp {total_price:,}</h2>
+    </div>
+    """, unsafe_allow_html=True)
     
     # Total Harga
    selected_product = st.selectbox(
